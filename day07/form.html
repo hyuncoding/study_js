@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script>
+            window.onload = function () {
+                const $h2 = document.getElementsByTagName("h2")[0];
+                // $h2.innerText = "<p>회원가입</p>";
+                $h2.innerHTML = "<p>회원가입</p>";
+            };
+        </script>
+    </head>
+    <body>
+        <div>
+            <h2>로그인</h2>
+            <input name="user-email" />
+            <input name="user-pw" />
+            <button onclick="onClickLognBtn()">로그인</button>
+            <!-- button onclick 속성에 값을 부여, 속성은 dom 객체로만 부여 가능한 것이 아님 -->
+            <!-- dom 객체를 활용하여 사용자의 행위에 따라 속성을 변환할 수 있다는 장점이 있음 -->
+        </div>
+        <script>
+            const $userEmail = document.getElementsByName("user-email");
+            const $userPassword = document.getElementsByName("user-pw");
+            const $button = document.getElementsByTagName("button");
+
+            function onClickLognBtn() {
+                console.log($userEmail[0].value, $userPassword[0].value);
+                // 사용자가 input에 입력한 값을 가져오는 것이 value
+            }
+            $button[0].onclick = onClickLognBtn;
+        </script>
+    </body>
+</html>

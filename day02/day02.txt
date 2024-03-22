@@ -1,0 +1,92 @@
+
+
+ 제어문
+    1. 조건문
+        특정한 조건이 주어지고 그 조건의 평가(true/false)에 따라 실행 결과가
+        달라지는 명령문
+
+        ex)
+            만약에 a가 5보다 커? { }(블럭) 안에 있는 기능 실행
+            if(a>5){
+                console.log(a)
+            }
+
+            let a = 4;
+            if(a===5){
+                ++a;
+            } else {
+                --a;
+            }
+            console.log(a) // 3
+
+            -----------------------------------------------------------------
+
+        2) switch 
+            변수의 값이 참인지 아닌지 
+
+            ex)
+                switch (기준으로 삼을 변수명){
+                    case 값1: 
+                        변수의 값이 값1과 같으면 실행할 명령;
+                    case 값2:
+                        변수의 값이 값2와 같으면 실행할 명령;
+                    ...
+                    default:
+                        기본값; (case에 일치하는 값이 없을 때 실행할 명령)
+                }
+
+    2. 반복문
+            주어진 조건식의 결과가 참일 때까지 {}(블럭) 내의 명령문을 반복 실행하는 것
+
+            1) for -- 가족 (forEach, for..in, for..of)
+
+                ex)
+                for(초기화식; 조건식; 증감식){
+                    ... 조건식이 참인 경우 실행할 문장
+                }
+
+                for(let i=0; i<10; i++){
+                    console.log(i);
+                }
+                // 0~9
+
+
+                for(;;){
+                    console.log('a');
+                }
+                // 무한 루프
+
+
+            2) while문
+                ()안에 조건식이 true일 동안 실행할 문장
+
+                ex) 
+                    while(조건식){
+                        조건식이 true일 때 실행할 문장
+                    }
+
+                    let num = 5;
+
+                    while(true){
+                        console.log(num);
+                        num--;
+                        if(num===0) break;
+                        // 무한 루프에 대한 탈출
+                    }
+
+                    while(num<10){
+                        num++;
+                        console.log(num);
+                    }
+
+                do.. while
+                    while 문과 기능은 같지만 조건식이 false라 할지라도
+                    "무조건 한번"은 실행하고 반복
+
+                    let count = 3;
+                    do {
+                        console.log(count);
+                    } while (count < 3)
+
+
+ 함수

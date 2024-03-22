@@ -1,0 +1,79 @@
+    String
+    
+        String.length() : 문자열의 길이 
+        String.prototype.charAt(index) : 해당 index의 문자
+                        .concat(문자열) : 문자열 두 개를 이어붙임 
+                        .replace('a', 'b'): a라는 문자를 b로 대체한다.
+                                ex) "Hello".replace("e", "o") // Hollo
+                        .toLowerCase() : 전부 소문자로 전환
+                        .toUpperCase() : 전부 대문자로 전환
+                        .split() : 분할, 쪼개기
+                        .repeat(n) : n번 문자열 반복
+
+    Date
+
+        날짜와 시간을 생성하는 빌트인 함수 
+        --> 로컬 컴퓨터 환경 시간 기준 ---> 라이브러리(도구) >> dayjs, momentJs, luxon (서버의 시간)
+
+        * 아하 모먼트
+
+            협정 세계시 (1972년 1월 1일에 지정되었습니다.)
+            유닉스의 시간이 지나기 시작한 1970년도 1월 1일 자정을 기준으로 몇 초가 지났는지 밀리세컨즈로
+            변환한 것을 utc(협정 세계시)라고 부른다.
+
+            한국 utc+9
+
+            서버에서 시간을 저장할 때 무조건 utc를 기준으로 저장 
+            어느 나라에서든 시간 대의 차이가 없이 서비스를 이용할 수 있도록 하기 위해서
+            프론트엔드에서 현재 위치를 기준으로 utc 타임을 변환하여 보여줌
+
+----------------------------------------------------------------------------------------------------------
+
+// 깊은 복사와 얕은 복사, map, set, 조건부 연산자, 삼항연산자
+
+----------------------------------------------------------------------------------------------------------
+
+DOM API
+    DOM (Document Object Model) 문서 객체 모델
+      흔히 HTML에서 사용하는 div, span과 같은 요소들을 일컫는 말
+
+    API (Application Programming Interface)
+      응용 프로그램 사이에서 통신에 사용되는 언어와 메시지를 이야기합니다.
+
+----------------------------------------------------------------------------------------------------------
+
+DOM SELECTOR
+
+    1. document.getElementById(); -- 단일 객체 
+        괄호 안에 전달된 id 값을 가지고 있는 요소를 선택 
+
+    2. document.getElementsByClassName(); -- 복수 객체
+        괄호 안에 전달된 class를 가지고 있는 모든 요소를 선택
+
+    3. document.querySelector('.seongyong > p > a'); -----> 인자로 CSS 선택자
+        - 단일 객체
+        - 만약 여러 개 있다면 가장 먼저 검색되는 것을 가지고 온다.
+
+    4. document.querySelectorAll('.seongyong');
+        - 복수 객체 
+
+----------------------------------------------------------------------------------------------------------
+
+Properties 속성
+
+    value
+    innerText // <div id="id"> 성용 </div> 
+    document.getElementById("id").innerText = "성용123";
+
+    innerHTML
+    document.getElementById("id").innerHTML = "<div>성용123</div>";
+
+    style
+    classList
+
+    onclick // 요소를 클릭했을 때
+    onchange // 요소의 값이 변경되었을 때
+    onmouseover // 요소에서 마우스가 올라갔을 때
+    onmouseleave // 요소에서 마우스가 떠났을 때
+    onKeydown // 키보드가 눌렸을 때의 이벤트
+    // on => 이벤트, 사용자의 행위
