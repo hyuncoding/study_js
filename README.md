@@ -1,5 +1,5 @@
 # JavaScript
-> 웹개발 강의에서 공부한 JavaScript 관련 내용입니다.
+> 웹개발 및 front-end 강의에서 공부한 JavaScript 관련 내용입니다.
 
 <hr/>
 
